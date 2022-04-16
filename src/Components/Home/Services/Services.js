@@ -7,61 +7,69 @@ import s3 from "../../../img/s3.jpg";
 
 const Services = () => {
   return (
-    <div className="container all-card ">
-      <Card style={{ width: "18rem" }}>
-        <Card.Img variant="top" src={s1} />
-        <Card.Body>
-          <h1>ACCOUNTABILITY</h1>
-          <Card.Title>ACCOUNTABILITY</Card.Title>
-          <h2>
-            $100 <small>/month</small>{" "}
-          </h2>
-          <Card.Text>
-            If you are confident in the hows and whys of traning and have a
-            pretty solid knowledge of traning, this package is for you. You're
-            confident in the gym abd want the extra push for me
-          </Card.Text>
-        </Card.Body>
-        <Card.Body>
-          <button>Proceed Checkout</button>
-        </Card.Body>
-      </Card>
-      <Card style={{ width: "18rem" }}>
-        <Card.Img variant="top" src={s2} />
-        <Card.Body>
-          <Card.Title>ACCOUNTABILITY</Card.Title>
-        </Card.Body>
-
-        <ListGroup className="list-group-flush">
-          <ListGroupItem>Cras justo odio</ListGroupItem>
-          <ListGroupItem>Dapibus ac facilisis in</ListGroupItem>
-          <ListGroupItem>Vestibulum at eros</ListGroupItem>
-        </ListGroup>
-        <Card.Text></Card.Text>
-        <Card.Body>
-          <Card.Link href="#">Card Link</Card.Link>
-          <Card.Link href="#">Another Link</Card.Link>
-        </Card.Body>
-      </Card>
-      <Card style={{ width: "18rem" }}>
-        <Card.Img variant="top" src={s3} />
-        <Card.Body>
-          <Card.Title>Card Title</Card.Title>
-          <Card.Text>
-            Some quick example text to build on the card title and make up the
-            bulk of the card's content.
-          </Card.Text>
-        </Card.Body>
-        <ListGroup className="list-group-flush">
-          <ListGroupItem>Cras justo odio</ListGroupItem>
-          <ListGroupItem>Dapibus ac facilisis in</ListGroupItem>
-          <ListGroupItem>Vestibulum at eros</ListGroupItem>
-        </ListGroup>
-        <Card.Body>
-          <Card.Link href="#">Card Link</Card.Link>
-          <Card.Link href="#">Another Link</Card.Link>
-        </Card.Body>
-      </Card>
+    <div className="mt-5 ">
+      <h1 className=" text-center">Our Services</h1>
+      <div className="line mb-5"></div>
+      <div className="container all-card ">
+        <Card style={{ width: "18rem" }}>
+          <Card.Img variant="top" src={s1} />
+          <Card.Body>
+            <Card.Title>ACCOUNTABILITY</Card.Title>
+            <div className="price">
+              <h2>
+                $80 <sub>/month</sub>
+              </h2>
+            </div>
+            <Card.Text>
+              If you are confident in the hows and whys of trancing and have a
+              pretty solid knowledge of trancing, this package is for you.
+              You're confident in the gym abd want the extra push for me
+            </Card.Text>
+          </Card.Body>
+          <Card.Body>
+            <button>Proceed Checkout</button>
+          </Card.Body>
+        </Card>
+        <Card style={{ width: "18rem" }}>
+          <Card.Img variant="top" src={s2} />
+          <Card.Body>
+            <Card.Title>FAST TRACK</Card.Title>
+            <div className="price">
+              <h2>
+                $150 <sub>/month</sub>
+              </h2>
+            </div>
+            <Card.Text>
+              If you strive for real results and want to receive the guidance
+              you need tos et yourself up for success, then this is the package
+              for you. You'll be working with me directly and checking in twice
+              a week.
+            </Card.Text>
+          </Card.Body>
+          <Card.Body>
+            <button>Proceed Checkout</button>
+          </Card.Body>
+        </Card>
+        <Card style={{ width: "18rem" }}>
+          <Card.Img variant="top" src={s3} />
+          <Card.Body>
+            <Card.Title>ULTIMATE 16 WEEK</Card.Title>
+            <div className="price">
+              <h2>
+                $210 <sub>/month</sub>
+              </h2>
+            </div>
+            <Card.Text>
+              If you are confident in the hows and whys of trancing and have a
+              pretty solid knowledge of trancing, this package is for you.
+              You're confident in the gym abd want the extra push for me
+            </Card.Text>
+          </Card.Body>
+          <Card.Body>
+            <button>Proceed Checkout</button>
+          </Card.Body>
+        </Card>
+      </div>
     </div>
   );
 };

@@ -35,9 +35,21 @@
   font-weight: 700;
   font-size: 20px;
 }
-.cart-price h2 :not(small) {
+.all-card h2 {
   padding-top: 20px;
   text-align: center;
   font-weight: 900;
   font-size: 40px;
+  margin-bottom: 30px;
+}
+
+sub {
+  font-size: 15px;
+  font-weight: 400;
+}
+.line {
+  border: 1px solid;
+  width: 150px;
+  margin: 0 auto;
+  color: #fed134;
 }
