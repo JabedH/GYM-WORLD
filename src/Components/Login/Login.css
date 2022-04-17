@@ -13,6 +13,12 @@
   color: white;
   font-weight: 500;
 }
+.btn-color span {
+  color: white;
+}
+.btn-color span:hover {
+  color: black;
+}
 .full-form {
   margin-top: 150px;
   padding: 0 10px 10px 10px;

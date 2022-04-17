@@ -71,7 +71,7 @@ const Login = () => {
           placeholder="ConfirmPassword"
         /> */}
             <button className="w-100 btn-color mt-3" type="submit">
-              Submit
+              <span>Submit</span>
             </button>
             <div className="mt-2 text-center ">
               <Link
