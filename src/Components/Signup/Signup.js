@@ -1,17 +1,28 @@
 import React from "react";
 import { Form } from "react-bootstrap";
+import { useCreateUserWithEmailAndPassword } from "react-firebase-hooks/auth";
 import { Link } from "react-router-dom";
+import auth from "../../firebase.init";
 import bg from "../../img/bg.jpg";
 import Sociallogin from "../Sociallogin/Sociallogin";
 import "./Signup.css";
 
 const Signup = () => {
+  const [createUserWithEmailAndPassword, user, loading, error] =
+    useCreateUserWithEmailAndPassword(auth);
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    const displayName = event.target.name.value;
+    const email = event.target.email.value;
+    const password = event.target.password.value;
+    createUserWithEmailAndPassword(email, password);
+  };
   return (
     <div className="login-bg">
       <img src={bg} alt="" />
       <div className="form-padding container">
         <div className="full-form">
-          <Form className=" text-start">
+          <Form onSubmit={handleSubmit} className=" text-start">
             <input
               className="w-100 mt-3"
               type="text"

@@ -4,19 +4,31 @@ import { Form } from "react-bootstrap";
 import { Link, useNavigate } from "react-router-dom";
 import bg from "../../img/bg.jpg";
 import Sociallogin from "../Sociallogin/Sociallogin";
+import { useSignInWithEmailAndPassword } from "react-firebase-hooks/auth";
+import auth from "../../firebase.init";
 
 const Login = () => {
+  const [signInWithEmailAndPassword, user, loading, error] =
+    useSignInWithEmailAndPassword(auth);
   const navigate = useNavigate();
   const handleSignUp = () => {
     navigate("Signup");
-    console.log("i got it");
+  };
+  if (user) {
+    navigate("/");
+  }
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    const email = event.target.email.value;
+    const password = event.target.password.value;
+    signInWithEmailAndPassword(email, password);
   };
   return (
     <div className="login-bg">
       <img src={bg} alt="" />
       <div className="form-padding ">
         <div className="full-form">
-          <Form className=" text-start">
+          <Form onSubmit={handleSubmit} className=" text-start">
             <input
               className="w-100 mt-3"
               type="email"
