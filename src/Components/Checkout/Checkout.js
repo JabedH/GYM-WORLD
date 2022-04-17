@@ -8,8 +8,9 @@ const Checkout = () => {
     <div className="checkout">
       <div className="delivery-details container">
         <div>
-          <h1 className="text-center">Edit Delivery Details</h1>
-          <Form className="text-start">
+          <h4 className="text-center">Edit Delivery Details</h4>
+          <div className="form-line"></div>
+          <Form className="checkout-form">
             <input
               className="w-100 mt-3"
               type="text"
@@ -27,10 +28,10 @@ const Checkout = () => {
             />
             <input
               className="w-100 mt-3"
-              type="text"
+              type="number"
               name="name"
               id=""
-              placeholder="your name"
+              placeholder="Enter Mobile Number"
               required
             />
             <input
@@ -38,7 +39,7 @@ const Checkout = () => {
               type="text"
               name="name"
               id=""
-              placeholder="your name"
+              placeholder="your adders"
               required
             />
 
@@ -53,13 +54,9 @@ const Checkout = () => {
               ></textarea>
             </div>
             <button className="w-100 btn-color mt-3" type="submit">
-              Submit
+              Save & Continue
             </button>
-            <div className="mt-2 text-center ">
-              <Link to="/login" className="text-decoration-none account ">
-                Already you have an account?
-              </Link>
-            </div>
+            <div className="mt-2 text-center "></div>
 
             <div className="social-line">
               <dir className="or-line"></dir>
@@ -69,23 +66,22 @@ const Checkout = () => {
           </Form>
         </div>
         <div className="o-summary">
-          <h1>Order summary</h1>
+          <h5 className="mt-3">Order Summary</h5>
           <div className="order-item-align">
             <p>Plan</p>
-            <p>Gold Membership</p>
+            <p>ACCOUNTABILITY</p>
           </div>
           <div className="order-item-align">
             <p>Duration</p>
-            <p>12 months</p>
+            <p>1 month</p>
           </div>
-
           <div className="order-line"></div>
           <div className="order-item-align">
             <h5>Total</h5>
-            <h5>$25</h5>
+            <h5>$80</h5>
           </div>
           <p className="text-end">every month</p>
-          <button className="w-100 btn-color mt-3" type="submit">
+          <button className="w-100 checkout-btn mt-3" type="submit">
             Submit
           </button>
         </div>

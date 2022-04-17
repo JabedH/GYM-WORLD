@@ -4,6 +4,7 @@ import { Card, CardGroup, ListGroup, ListGroupItem } from "react-bootstrap";
 import s1 from "../../../img/s1.jpg";
 import s2 from "../../../img/s2.jpg";
 import s3 from "../../../img/s3.jpg";
+import { Link } from "react-router-dom";
 
 const Services = () => {
   return (
@@ -27,7 +28,9 @@ const Services = () => {
             </Card.Text>
           </Card.Body>
           <Card.Body>
-            <button>Proceed Checkout</button>
+            <Link to="/Checkout" className="text-decoration-none  ">
+              <button>Proceed Checkout</button>
+            </Link>
           </Card.Body>
         </Card>
         <Card style={{ width: "18rem" }}>
@@ -47,7 +50,9 @@ const Services = () => {
             </Card.Text>
           </Card.Body>
           <Card.Body>
-            <button>Proceed Checkout</button>
+            <Link to="/Checkout" className="text-decoration-none  ">
+              <button>Proceed Checkout</button>
+            </Link>
           </Card.Body>
         </Card>
         <Card style={{ width: "18rem" }}>
@@ -67,7 +72,9 @@ const Services = () => {
             </Card.Text>
           </Card.Body>
           <Card.Body>
-            <button>Proceed Checkout</button>
+            <Link to="/Checkout" className="text-decoration-none  ">
+              <button>Proceed Checkout</button>
+            </Link>
           </Card.Body>
         </Card>
       </div>

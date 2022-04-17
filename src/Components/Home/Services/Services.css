@@ -13,6 +13,9 @@
   color: white;
   padding: 10px;
 }
+.all-card a {
+  color: white;
+}
 .all-card button:hover {
   background-color: #fed134;
   color: black;

@@ -5,6 +5,7 @@
   margin-top: 80px;
 }
 .text-area textarea {
+  padding: 10px;
   width: 100%;
   border: none;
   background-color: rgb(235, 235, 235);
@@ -13,14 +14,25 @@
   display: grid;
   grid-template-columns: 2fr 1fr;
 }
-.text-start {
+.checkout-form {
   width: 60%;
   margin: 0 auto;
+}
+/* .text-start {
+  width: 100%;
+  position: static;
+} */
+.checkout-form input {
+  background-color: rgb(235, 235, 235);
+  border: 0;
+  height: 40px;
+  padding-left: 10px;
 }
 /* ---- */
 .o-summary {
   padding: 0 20px;
   border: 1px solid #ccc;
+  margin-bottom: 150px;
 }
 .order-item-align {
   display: flex;
@@ -29,4 +41,21 @@
 .order-line {
   border: 1px solid #ccc;
   margin: 10px 0;
+}
+.form-line {
+  border: 1px solid #ccc;
+  width: 60%;
+  margin: 0 auto;
+}
+.checkout-btn {
+  background-color: #8ec33e;
+  border: none;
+}
+.checkout-btn:hover {
+  background-color: #fed134;
+}
+.checkout-btn {
+  height: 40px;
+  color: white;
+  font-weight: 500;
 }
