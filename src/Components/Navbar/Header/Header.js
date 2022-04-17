@@ -12,9 +12,7 @@ const Header = () => {
   const handleLogout = () => {
     signOut(auth);
   };
-  if (!user) {
-    navigate("/");
-  }
+
   return (
     <div>
       <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">

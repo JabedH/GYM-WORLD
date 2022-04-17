@@ -9,6 +9,7 @@ import Classes from "./Components/Classes/Classes";
 import Blog from "./Components/Blog/Blog";
 import Login from "./Components/Login/Login";
 import Signup from "./Components/Signup/Signup";
+import NotFound from "./Components/NotFound/NotFound";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
         <Route path="/Blog" element={<Blog />}></Route>
         <Route path="/Login" element={<Login />}></Route>
         <Route path="/Signup" element={<Signup />}></Route>
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </div>
   );

@@ -1,27 +1,45 @@
-import React from "react";
+import React, { useRef, useState } from "react";
 import "./Login.css";
 import { Form } from "react-bootstrap";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import bg from "../../img/bg.jpg";
 import Sociallogin from "../Sociallogin/Sociallogin";
-import { useSignInWithEmailAndPassword } from "react-firebase-hooks/auth";
+import {
+  useSendPasswordResetEmail,
+  useSignInWithEmailAndPassword,
+  useUpdatePassword,
+} from "react-firebase-hooks/auth";
 import auth from "../../firebase.init";
 
 const Login = () => {
   const [signInWithEmailAndPassword, user, loading, error] =
     useSignInWithEmailAndPassword(auth);
+  const [sendPasswordResetEmail, sending1, error1] =
+    useSendPasswordResetEmail(auth);
   const navigate = useNavigate();
+  const emailRef = useRef("");
+  const passwordRef = useRef("");
+  const location = useLocation();
+
+  let from = location.state?.from?.pathname || "/";
+
+  if (user) {
+    navigate(from, { replace: true });
+  }
   const handleSignUp = () => {
     navigate("Signup");
   };
-  if (user) {
-    navigate("/");
-  }
   const handleSubmit = (event) => {
     event.preventDefault();
-    const email = event.target.email.value;
-    const password = event.target.password.value;
+    const email = emailRef.current.value;
+    const password = passwordRef.current.value;
     signInWithEmailAndPassword(email, password);
+  };
+  const resetPassword = async () => {
+    const email = emailRef.current.value;
+    console.log(email);
+    await sendPasswordResetEmail(email);
+    alert("sent reset email");
   };
   return (
     <div className="login-bg">
@@ -30,6 +48,7 @@ const Login = () => {
         <div className="full-form">
           <Form onSubmit={handleSubmit} className=" text-start">
             <input
+              ref={emailRef}
               className="w-100 mt-3"
               type="email"
               name="email"
@@ -37,6 +56,7 @@ const Login = () => {
               required
             />
             <input
+              ref={passwordRef}
               className="w-100 mt-3 pl-2"
               type="password"
               name="password"
@@ -62,7 +82,11 @@ const Login = () => {
               </Link>
             </div>
             <div className="mt-2 text-center ">
-              <Link to="/login" className="text-decoration-none account ">
+              <Link
+                to="/login"
+                onClick={resetPassword}
+                className="text-decoration-none account "
+              >
                 Forget Password?
               </Link>
             </div>

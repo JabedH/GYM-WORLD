@@ -1,22 +1,37 @@
 import React from "react";
 import { Form } from "react-bootstrap";
-import { useCreateUserWithEmailAndPassword } from "react-firebase-hooks/auth";
-import { Link } from "react-router-dom";
+import {
+  useCreateUserWithEmailAndPassword,
+  useSendEmailVerification,
+} from "react-firebase-hooks/auth";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import auth from "../../firebase.init";
 import bg from "../../img/bg.jpg";
 import Sociallogin from "../Sociallogin/Sociallogin";
 import "./Signup.css";
 
 const Signup = () => {
+  const navigate = useNavigate();
   const [createUserWithEmailAndPassword, user, loading, error] =
-    useCreateUserWithEmailAndPassword(auth);
-  const handleSubmit = (event) => {
+    useCreateUserWithEmailAndPassword(auth, { sendEmailVerification: true });
+  const [sendEmailVerification, sending, error1] =
+    useSendEmailVerification(auth);
+  const location = useLocation();
+
+  const handleSubmit = async (event) => {
     event.preventDefault();
     const displayName = event.target.name.value;
     const email = event.target.email.value;
     const password = event.target.password.value;
     createUserWithEmailAndPassword(email, password);
+    await sendEmailVerification(email);
+    alert("Sent email");
   };
+  let from = location.state?.from?.pathname || "/";
+
+  if (user) {
+    navigate(from, { replace: true });
+  }
   return (
     <div className="login-bg">
       <img src={bg} alt="" />
