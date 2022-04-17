@@ -53,16 +53,17 @@ const Services = () => {
         <Card style={{ width: "18rem" }}>
           <Card.Img variant="top" src={s3} />
           <Card.Body>
-            <Card.Title>ULTIMATE 16 WEEK</Card.Title>
+            <Card.Title className="card-title">ULTIMATE 16 WEEK</Card.Title>
             <div className="price">
               <h2>
                 $210 <sub>/month</sub>
               </h2>
             </div>
             <Card.Text>
-              If you are confident in the hows and whys of trancing and have a
-              pretty solid knowledge of trancing, this package is for you.
-              You're confident in the gym abd want the extra push for me
+              Do you want the ultimate result? Do you want a 12 week package
+              that you can sustain that will give you the the healthy benefits
+              you crave? Do you want to learn how to achieve the body of your
+              dreams.
             </Card.Text>
           </Card.Body>
           <Card.Body>

@@ -41,6 +41,7 @@
   font-weight: 900;
   font-size: 40px;
   margin-bottom: 30px;
+  color: #414141;
 }
 
 sub {
@@ -52,4 +53,8 @@ sub {
   width: 150px;
   margin: 0 auto;
   color: #fed134;
+}
+.card-title {
+  font-size: 25px;
+  font-weight: bold;
 }
