@@ -1,0 +1,13 @@
+.social-icon button {
+  border: 0;
+  background-color: transparent;
+}
+.social-icon img {
+  padding: 5px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 10px;
+}
+.social-icon {
+  display: flex;
+  justify-content: space-evenly;
+}

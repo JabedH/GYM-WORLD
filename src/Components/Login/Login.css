@@ -40,3 +40,17 @@
 .account:hover {
   color: #fed134;
 }
+.or-line {
+  border: 1px solid white;
+  width: 40%;
+}
+.social-line p {
+  color: white;
+  margin-top: 10px;
+  padding: 0 10px;
+}
+.social-line {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
