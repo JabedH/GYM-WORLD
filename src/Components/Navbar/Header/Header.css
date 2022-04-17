@@ -2,10 +2,18 @@
   color: white;
   text-decoration: none;
   margin-left: 20px;
+  display: flex;
+  align-items: center;
 }
 .icon {
   color: white;
   text-decoration: none;
   margin-left: 20px;
   padding: 10px;
+}
+.signout {
+  background-color: #8ec33e;
+  color: red;
+  padding: 8px;
+  border-radius: 5px;
 }
