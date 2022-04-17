@@ -30,15 +30,15 @@ const Login = () => {
   const handleSignUp = () => {
     navigate("Signup");
   };
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
     const email = emailRef.current.value;
     const password = passwordRef.current.value;
-    signInWithEmailAndPassword(email, password);
+    await signInWithEmailAndPassword(email, password);
   };
   const resetPassword = async () => {
     const email = emailRef.current.value;
-    console.log(email);
+
     await sendPasswordResetEmail(email);
     alert("sent reset email");
   };

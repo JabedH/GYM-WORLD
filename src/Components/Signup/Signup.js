@@ -23,7 +23,7 @@ const Signup = () => {
     const displayName = event.target.name.value;
     const email = event.target.email.value;
     const password = event.target.password.value;
-    createUserWithEmailAndPassword(email, password);
+    await createUserWithEmailAndPassword(email, password);
     await sendEmailVerification(email);
     alert("Sent email");
   };

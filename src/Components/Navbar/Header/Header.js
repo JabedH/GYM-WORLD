@@ -5,6 +5,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { useAuthState } from "react-firebase-hooks/auth";
 import auth from "../../../firebase.init";
 import { signOut } from "firebase/auth";
+import CustomLink from "../../CustomLink/CustomLink";
 
 const Header = () => {
   const [user] = useAuthState(auth);
@@ -24,16 +25,18 @@ const Header = () => {
           <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="me-auto"></Nav>
             <Nav className="nav-item">
-              <Link to="/">HOME</Link>
-              <Link to="About">ABOUT</Link>
-              <Link to="Classes">CLASSES</Link>
-              <Link to="Blog">BLOG</Link>
+              <CustomLink to="/">HOME</CustomLink>
+              <CustomLink to="About">ABOUT</CustomLink>
+              <CustomLink to="Classes">CLASSES</CustomLink>
+              <CustomLink to="Blog">BLOG</CustomLink>
               {user ? (
                 <Link onClick={handleLogout} className="signout" to="/">
                   lOGOUT
                 </Link>
               ) : (
-                <Link to="Login">lOGIN</Link>
+                <CustomLink className="signint" to="Login">
+                  lOGIN
+                </CustomLink>
               )}
             </Nav>
           </Navbar.Collapse>

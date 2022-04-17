@@ -4,6 +4,7 @@
   margin-left: 20px;
   display: flex;
   align-items: center;
+  padding: 4px 8px;
 }
 .icon {
   color: white;
@@ -13,7 +14,15 @@
 }
 .signout {
   background-color: #8ec33e;
-  color: red;
-  padding: 8px;
+  padding: 4px 8px;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+.signout:hover {
+  background-color: #fed134;
+  color: black;
+}
+.signint {
+  padding: 4px 8px;
   border-radius: 5px;
 }
