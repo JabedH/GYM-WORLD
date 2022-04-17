@@ -29,7 +29,7 @@ const Header = () => {
               <Link to="Classes">CLASSES</Link>
               <Link to="Blog">BLOG</Link>
               {user ? (
-                <Link onClick={handleLogout} className="signout" to="About">
+                <Link onClick={handleLogout} className="signout" to="/">
                   lOGOUT
                 </Link>
               ) : (
