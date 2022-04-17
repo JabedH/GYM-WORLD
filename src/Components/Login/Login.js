@@ -10,6 +10,7 @@ import {
   useUpdatePassword,
 } from "react-firebase-hooks/auth";
 import auth from "../../firebase.init";
+import { toast, ToastContainer } from "react-toastify";
 
 const Login = () => {
   const [signInWithEmailAndPassword, user, loading, error] =
@@ -78,7 +79,7 @@ const Login = () => {
                 onClick={handleSignUp}
                 className="text-decoration-none account "
               >
-                Already you have an account?
+                haven't any account?
               </Link>
             </div>
             <div className="mt-2 text-center ">
