@@ -12,26 +12,24 @@ const Carosl = () => {
         <Carousel.Item className="Carosl-item">
           <img className="d-block w-100 " src={g1} alt="First slide" />
           <Carousel.Caption>
-            <h3>First slide label</h3>
-            <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+            <h3>Commit to be fit.</h3>
+            <p>LOVE YOURSELF ENOUGH TO WORK HARDER.</p>
           </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>
           <img className="d-block w-100" src={g2} alt="Second slide" />
 
           <Carousel.Caption>
-            <h3>Second slide label</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <h3>Turn fat into fit</h3>
+            <p>WILLPOWER KNOWS NO OBSTACLES..</p>
           </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>
           <img className="d-block w-100" src={g3} alt="Third slide" />
 
           <Carousel.Caption>
-            <h3>Third slide label</h3>
-            <p>
-              Praesent commodo cursus magna, vel scelerisque nisl consectetur.
-            </p>
+            <h3>Get in the groove</h3>
+            <p>EXERCISE YOUR MIND AND BODY.</p>
           </Carousel.Caption>
         </Carousel.Item>
       </Carousel>

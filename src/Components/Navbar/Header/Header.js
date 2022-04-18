@@ -19,7 +19,7 @@ const Header = () => {
       <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
         <Container>
           <Link to="/" className="icon">
-            <Navbar.Brand href="/">WORLD GYM</Navbar.Brand>
+            GYM WORLD
           </Link>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">

@@ -37,7 +37,7 @@ const Signup = () => {
       <img src={bg} alt="" />
       <div className="form-padding container">
         <div className="full-form">
-          <Form onSubmit={handleSubmit} className=" text-start">
+          <Form onSubmit={handleSubmit} className=" text-start signup-form">
             <input
               className="w-100 mt-3"
               type="text"
@@ -67,7 +67,7 @@ const Signup = () => {
           placeholder="ConfirmPassword"
         /> */}
             <button className="w-100 btn-color mt-3" type="submit">
-              Submit
+              Sign Up
             </button>
             <div className="mt-2 text-center ">
               <Link to="/login" className="text-decoration-none account ">

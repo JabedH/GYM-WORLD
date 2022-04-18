@@ -1,3 +1,10 @@
-.text-start input {
-  margin-top: 10px;
+.signup-form {
+  width: 100%;
+  position: static;
+}
+.signup-form input {
+  background-color: rgb(235, 235, 235);
+  border: 0;
+  height: 40px;
+  padding-left: 10px;
 }

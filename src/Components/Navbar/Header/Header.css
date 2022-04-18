@@ -11,6 +11,11 @@
   text-decoration: none;
   margin-left: 20px;
   padding: 10px;
+  font-size: 22px;
+  font-weight: 600;
+}
+.icon:hover {
+  color: white;
 }
 .signout {
   background-color: #8ec33e;

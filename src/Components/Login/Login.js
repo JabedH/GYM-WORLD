@@ -25,7 +25,16 @@ const Login = () => {
   let from = location.state?.from?.pathname || "/";
 
   if (user) {
+    console.log(user);
     navigate(from, { replace: true });
+  }
+  let ErrorElement;
+  if (error) {
+    ErrorElement = (
+      <div>
+        <p>password didn't match</p>
+      </div>
+    );
   }
   const handleSignUp = () => {
     navigate("Signup");
@@ -70,8 +79,12 @@ const Login = () => {
           name="ConfirmPassword"
           placeholder="ConfirmPassword"
         /> */}
-            <button className="w-100 btn-color mt-3" type="submit">
-              <span>Submit</span>
+            <div className="text-center mt-2" style={{ color: "red" }}>
+              {ErrorElement}
+            </div>
+
+            <button className="w-100 btn-color mt-2" type="submit">
+              <span>Login</span>
             </button>
             <div className="mt-2 text-center ">
               <Link
