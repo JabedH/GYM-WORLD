@@ -6,7 +6,6 @@ import {
 } from "react-firebase-hooks/auth";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import auth from "../../firebase.init";
-import bg from "../../img/bg.jpg";
 import Sociallogin from "../Sociallogin/Sociallogin";
 import "./Signup.css";
 
@@ -23,24 +22,13 @@ const Signup = () => {
     const displayName = event.target.name.value;
     const email = event.target.email.value;
     const password = event.target.password.value;
-    const ConfirmPassword = event.target.ConfirmPassword.value;
-    await createUserWithEmailAndPassword(email, password);
+    // const ConfirmPassword = event.target.ConfirmPassword.value;
+    createUserWithEmailAndPassword(email, password);
     await sendEmailVerification(email);
     alert("Sent email");
-    // if (password !== ConfirmPassword) {
-    //   error("ak nai");
-    //   return;
-    // }
   };
-  // if (error) {
-  //   ErrorElement = (
-  //     <div>
-  //       <p>password didn't match {error} </p>
-  //     </div>
-  //   );
-  // }
-  let from = location.state?.from?.pathname || "/";
 
+  let from = location.state?.from?.pathname || "/";
   if (user) {
     navigate(from, { replace: true });
   }
@@ -49,7 +37,7 @@ const Signup = () => {
       {/* <img src={bg} alt="" /> */}
       <div className="form-padding container">
         <div className="full-form">
-          <h3>Sign Up</h3>
+          <h3 className="text-center mt-2">Sign Up</h3>
           <Form onSubmit={handleSubmit} className=" text-start signup-form">
             <input
               className="w-100 mt-3"
@@ -73,13 +61,12 @@ const Signup = () => {
               placeholder="Password"
               required
             />
-            <input
+            {/* <input
               className="w-100 mt-3"
               type="password"
               name="ConfirmPassword"
               placeholder="ConfirmPassword"
-            />
-
+            /> */}
             <button className="w-100 btn-color mt-3" type="submit">
               Sign Up
             </button>

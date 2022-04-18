@@ -57,12 +57,6 @@ const Checkout = () => {
               Save & Continue
             </button>
             <div className="mt-2 text-center "></div>
-
-            <div className="social-line">
-              <dir className="or-line"></dir>
-              <p>Or</p>
-              <dir className="or-line"></dir>
-            </div>
           </Form>
         </div>
         <div className="o-summary">
