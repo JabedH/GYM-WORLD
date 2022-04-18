@@ -4,13 +4,13 @@
 
 ### About this siite.
 
-* this is a gym tring related site.
-* this site only for independendet person.
-* in this site hase a footer and header
-* this site also added service which is anyone can bye easily.
-* i ahve addded login and logout button. 
-* i have shown picture and reviews section.
-* top of the i ahve use carosul for sliding image which is look like intaresting.
+* This is a gym tring related site.
+* This site only for independendet person.
+* In this site hase a footer and header
+* This site also added service which is anyone can bye easily.
+* I ahve addded login and logout button. 
+* I have shown picture and reviews section.
+* Top of the i ahve use carosul for sliding image which is look like intaresting.
 
 ### About technology.
 * Html 
