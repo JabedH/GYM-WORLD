@@ -13,12 +13,12 @@ GYM WORLD -(https://world-gym-bb4c8.web.app/).
 * top of the i ahve use carosul for sliding image which is look like intaresting.
 
 ### About technology.
-*Html 
-*CSS 
-*Reactjs 
-*React Bootstrap 
-*fontawesome 
-*Google firebase 
-*react firebase hooks 
-*react roouts 
-*react Rating
+* Html 
+* CSS 
+* Reactjs 
+* React Bootstrap 
+* fontawesome 
+* Google firebase 
+* react firebase hooks 
+* react roouts 
+* react Rating
