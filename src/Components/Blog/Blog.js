@@ -6,14 +6,16 @@ const Blog = () => {
     <div className="blog ">
       <div className="blog1">
         <h3>Difference between authorization and authentication</h3>
+        <h5>Authorization</h5>
         <p>
-          authentication is the process of verifying who is user. Authentication
+          Authentication is the process of verifying who is user. Authentication
           works through passwords, email, biometric information, etc.
           Authentication is the first step of a identity. Authentication
           information , password can be change by the user.
         </p>
+        <h5>Authentication</h5>
         <p>
-          authorization is the process of verifying that specific applications
+          Authorization is the process of verifying that specific applications
           user can be access. Authorization works by the organization.
           Authorization always takes place and give access to data Authorization
           data is not changeable by user

@@ -15,7 +15,7 @@ const Footer = () => {
           <div className="footer-1st ">
             <div>
               <h4>GYM WORLD</h4>
-              <p>you can follow us in social media</p>
+              <p>you can follow me on social media</p>
               <div className="footer-icon">
                 <img src={social1} alt="" />
                 <img src={social2} alt="" />

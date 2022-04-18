@@ -63,8 +63,7 @@ sub {
 }
 /* responsive */
 /* media queries */
-@media only screen and (max-width: 767px) {
-}
+
 @media only screen and (max-width: 480px) {
   .all-card {
     display: grid;

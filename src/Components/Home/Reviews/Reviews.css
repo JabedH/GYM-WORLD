@@ -1,0 +1,32 @@
+@media only screen and (max-width: 480px) {
+  .Trainers-text {
+    padding: 0 20px;
+  }
+}
+.reviews-card img {
+  width: 30%;
+  margin: 0 auto;
+}
+.reviews-card {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+.single-card {
+  border: none;
+}
+.cart-item {
+  display: flex;
+  justify-content: center;
+}
+
+/* responsive */
+/* media queries */
+
+@media only screen and (max-width: 480px) {
+  .reviews-card {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
+}

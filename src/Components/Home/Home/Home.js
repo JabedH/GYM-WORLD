@@ -1,8 +1,8 @@
 import React from "react";
 import Photo from "../../Photo/Photo";
+import Reviews from "../../Home/Reviews/Reviews";
 import Carosl from "../Carosl/Carosl";
 import Services from "../Services/Services";
-import Trainers from "../Trainers/Trainers";
 
 const Home = () => {
   return (
@@ -10,7 +10,7 @@ const Home = () => {
       <Carosl />
       <Services />
       <Photo />
-      <Trainers />
+      <Reviews />
     </div>
   );
 };

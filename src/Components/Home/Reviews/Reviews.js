@@ -1,5 +1,5 @@
 import React from "react";
-import "./Trainers.css";
+import "./Reviews.css";
 import { faStar } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Card } from "react-bootstrap";
@@ -8,12 +8,12 @@ import revw2 from "../../../img/rev/2.png";
 import revw3 from "../../../img/rev/3.png";
 import Rating from "react-rating";
 
-const Trainers = () => {
+const Reviews = () => {
   return (
     <div className="mt-5 ">
       <h1 className=" text-center">Reviews </h1>
       <div className="line mb-4"></div>
-      <div className="container all-card ">
+      <div className="container reviews-card ">
         <Card className="single-card" style={{ width: "18rem" }}>
           <Card.Img variant="top" src={revw1} />
           <Card.Body>
@@ -71,7 +71,7 @@ const Trainers = () => {
             <Card.Text className="text-center">
               Excellent personal training. Trainers who really care and go above
               and beyond to help you achieve your goals. Small and private gym
-              that feels more personal.It’s great! I feel 10 years younger.
+              that feels more personal.It’s great! I feel 10 years younger!
               Highly recommended!
             </Card.Text>
             <div className="cart-item">
@@ -94,4 +94,4 @@ const Trainers = () => {
   );
 };
 
-export default Trainers;
+export default Reviews;

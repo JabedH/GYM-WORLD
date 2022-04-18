@@ -5,6 +5,7 @@ import {
   useSendEmailVerification,
 } from "react-firebase-hooks/auth";
 import { Link, useLocation, useNavigate } from "react-router-dom";
+import { toast, ToastContainer } from "react-toastify";
 import auth from "../../firebase.init";
 import Sociallogin from "../Sociallogin/Sociallogin";
 import "./Signup.css";
@@ -22,10 +23,9 @@ const Signup = () => {
     const displayName = event.target.name.value;
     const email = event.target.email.value;
     const password = event.target.password.value;
-    // const ConfirmPassword = event.target.ConfirmPassword.value;
     createUserWithEmailAndPassword(email, password);
     await sendEmailVerification(email);
-    alert("Sent email");
+    toast("Sent verification email");
   };
 
   let from = location.state?.from?.pathname || "/";
@@ -61,12 +61,7 @@ const Signup = () => {
               placeholder="Password"
               required
             />
-            {/* <input
-              className="w-100 mt-3"
-              type="password"
-              name="ConfirmPassword"
-              placeholder="ConfirmPassword"
-            /> */}
+
             <button className="w-100 btn-color mt-3" type="submit">
               Sign Up
             </button>
@@ -83,6 +78,7 @@ const Signup = () => {
             </div>
           </Form>
           <Sociallogin />
+          <ToastContainer />
         </div>
       </div>
     </div>
