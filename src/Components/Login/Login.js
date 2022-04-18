@@ -10,7 +10,9 @@ import {
   useUpdatePassword,
 } from "react-firebase-hooks/auth";
 import auth from "../../firebase.init";
-import { toast, ToastContainer } from "react-toastify";
+import { ToastContainer, toast } from "react-toastify";
+
+import "react-toastify/dist/ReactToastify.css";
 
 const Login = () => {
   const [signInWithEmailAndPassword, user, loading, error] =
@@ -48,8 +50,12 @@ const Login = () => {
   };
   const resetPassword = async () => {
     const email = emailRef.current.value;
-    await sendPasswordResetEmail(email);
-    alert("sent reset email");
+    if (email) {
+      await sendPasswordResetEmail(email);
+      toast("sent reset email");
+    } else {
+      toast("please enter your email address");
+    }
   };
   return (
     <div className="login-bg">
@@ -106,6 +112,7 @@ const Login = () => {
             </div>
           </Form>
           <Sociallogin />
+          <ToastContainer />
         </div>
       </div>
     </div>
