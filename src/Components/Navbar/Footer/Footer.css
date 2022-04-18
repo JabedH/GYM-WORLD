@@ -9,12 +9,12 @@
   justify-items: center;
   padding: 20px 0;
 }
-.social-icon img {
-  width: 40px;
+.footer-icon img {
+  width: 35px;
   background-color: transparent;
-  margin-right: 10px;
+  margin-right: 20px;
 }
-.social-icon {
+.footer-icon {
   display: flex;
   justify-content: start;
 }
