@@ -10,3 +10,7 @@
 .single-card {
   border: none;
 }
+.cart-item {
+  display: flex;
+  justify-content: center;
+}

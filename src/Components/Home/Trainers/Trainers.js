@@ -1,9 +1,12 @@
 import React from "react";
 import "./Trainers.css";
+import { faStar } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Card } from "react-bootstrap";
 import revw1 from "../../../img/rev/1.png";
 import revw2 from "../../../img/rev/2.png";
 import revw3 from "../../../img/rev/3.png";
+import Rating from "react-rating";
 
 const Trainers = () => {
   return (
@@ -16,19 +19,24 @@ const Trainers = () => {
           <Card.Body>
             <h5 className="text-center">MARTHA SMITH</h5>
             <Card.Text className="text-center">
-              AMAZING GYM, AMAZING WORKOUTS! The staff here is incredibly
-              friendly and extremely qualified! They know how to push you to the
-              limit in the best way possible with your workouts. I highly
-              recommend checking this gym out.
+              AMAZING GYM! The staff here is incredibly friendly and extremely
+              qualified! They know how to push you to the limit in the best way
+              possible with your workouts. I highly recommend checking this gym
+              out.
             </Card.Text>
-            <Rating
-              initialRating={rating}
-              emptySymbol={<FontAwesomeIcon icon={faStar} />}
-              fullSymbol={
-                <FontAwesomeIcon style={{ color: "goldenrod" }} icon={faStar} />
-              }
-              readonly
-            ></Rating>
+            <div className="cart-item">
+              <Rating
+                initialRating={4}
+                emptySymbol={<FontAwesomeIcon icon={faStar} />}
+                fullSymbol={
+                  <FontAwesomeIcon
+                    style={{ color: "goldenrod" }}
+                    icon={faStar}
+                  />
+                }
+                readonly
+              ></Rating>
+            </div>
           </Card.Body>
         </Card>
         <Card className="single-card" style={{ width: "18rem" }}>
@@ -41,6 +49,19 @@ const Trainers = () => {
               helpful, they make you feel really comfortable. Everyday is a new
               training, so it is never boring.
             </Card.Text>
+            <div className="cart-item">
+              <Rating
+                initialRating={4.5}
+                emptySymbol={<FontAwesomeIcon icon={faStar} />}
+                fullSymbol={
+                  <FontAwesomeIcon
+                    style={{ color: "goldenrod" }}
+                    icon={faStar}
+                  />
+                }
+                readonly
+              ></Rating>
+            </div>
           </Card.Body>
         </Card>
         <Card className="single-card" style={{ width: "18rem" }}>
@@ -50,8 +71,22 @@ const Trainers = () => {
             <Card.Text className="text-center">
               Excellent personal training. Trainers who really care and go above
               and beyond to help you achieve your goals. Small and private gym
-              that feels more personal. Highly recommended!
+              that feels more personal.It’s great! I feel 10 years younger.
+              Highly recommended!
             </Card.Text>
+            <div className="cart-item">
+              <Rating
+                initialRating={5}
+                emptySymbol={<FontAwesomeIcon icon={faStar} />}
+                fullSymbol={
+                  <FontAwesomeIcon
+                    style={{ color: "goldenrod" }}
+                    icon={faStar}
+                  />
+                }
+                readonly
+              ></Rating>
+            </div>
           </Card.Body>
         </Card>
       </div>
