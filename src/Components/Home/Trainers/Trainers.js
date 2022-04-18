@@ -1,4 +1,5 @@
 import React from "react";
+import "./Trainers.css";
 import { Card } from "react-bootstrap";
 import trainer1 from "../../../img/trainer1.jpg";
 import trainer2 from "../../../img/trainer2.jpg";
@@ -9,7 +10,7 @@ const Trainers = () => {
     <div className="mt-5 ">
       <h1 className=" text-center">Our Trainers</h1>
       <div className="line mb-2"></div>
-      <p className=" text-center mb-5">
+      <p className=" text-center mb-5 Trainers-text">
         Always free from repetition repeat predefined chunks injected humour
       </p>
       <div className="container all-card ">

@@ -9,7 +9,7 @@ import { Link } from "react-router-dom";
 const Services = () => {
   return (
     <div className="mt-5 ">
-      <h1 className=" text-center">Our Services</h1>
+      <h1 className=" text-center">My Services</h1>
       <div className="line mb-5"></div>
       <div className="container all-card ">
         <Card style={{ width: "18rem" }}>

@@ -15,7 +15,7 @@ const Header = () => {
   };
 
   return (
-    <div>
+    <div className="header">
       <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
         <Container>
           <Link to="/" className="icon">

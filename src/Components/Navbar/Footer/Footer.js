@@ -9,9 +9,9 @@ const Footer = () => {
   const today = new Date();
   const year = today.getFullYear();
   return (
-    <div>
+    <div className="main-footer">
       <div className="footer-bg">
-        <div className="footer container">
+        <div className="footer ">
           <div className="footer-1st ">
             <div>
               <h4>GYM WORLD</h4>

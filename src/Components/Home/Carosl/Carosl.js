@@ -7,7 +7,7 @@ import g3 from "../../../img/g3.jpg";
 
 const Carosl = () => {
   return (
-    <div>
+    <div className="carosl">
       <Carousel>
         <Carousel.Item className="Carosl-item">
           <img className="d-block w-100 " src={g1} alt="First slide" />

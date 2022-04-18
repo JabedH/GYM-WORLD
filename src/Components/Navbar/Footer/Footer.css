@@ -1,3 +1,6 @@
+.main-footer {
+  margin-bottom: -16px;
+}
 .footer-bg {
   background-color: #1a1a1a;
   color: white;
@@ -31,4 +34,17 @@
 }
 .footer-bottom p {
   padding: 20px 0;
+}
+
+/* responsive */
+/* media queries */
+@media only screen and (max-width: 480px) {
+  .footer {
+    grid-template-columns: 1fr;
+    justify-items: start;
+    margin-left: 20px;
+  }
+  .footer-bottom p {
+    font-size: 10px;
+  }
 }
