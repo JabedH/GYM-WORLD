@@ -32,8 +32,7 @@ const Signup = () => {
     if (password !== ConfirmPass) {
       setNewError("password did not match");
       return;
-    }
-    if (password.length < 6) {
+    } else if (password.length < 6) {
       setNewError("password must be 6 characters or longer");
       return;
     } else {
@@ -80,7 +79,9 @@ const Signup = () => {
               placeholder="confirm Password"
               required
             />
-            {newError}
+            <div style={{ color: "red" }} className="text-center mt-2">
+              {newError}
+            </div>
             <button className="w-100 btn-color mt-3" type="submit">
               Sign Up
             </button>

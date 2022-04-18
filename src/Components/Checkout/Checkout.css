@@ -55,3 +55,15 @@
   color: white;
   font-weight: 500;
 }
+
+/* responsive */
+@media only screen and (max-width: 480px) {
+  .delivery-details {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  .checkout-form {
+    width: 80%;
+    margin: 0 auto;
+  }
+}
