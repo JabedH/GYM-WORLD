@@ -27,7 +27,7 @@ const Header = () => {
             <Nav className="nav-item">
               <CustomLink to="/">HOME</CustomLink>
               <CustomLink to="About">ABOUT</CustomLink>
-              <CustomLink to="Classes">CLASSES</CustomLink>
+
               <CustomLink to="Blog">BLOG</CustomLink>
               {user ? (
                 <Link onClick={handleLogout} className="signout" to="/">
