@@ -4,8 +4,11 @@
 }
 .social-icon img {
   padding: 5px;
-  background-color: rgb(255, 255, 255);
+  background-color: rgb(240, 237, 237);
   border-radius: 10px;
+}
+.social-icon img:hover {
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
 .social-icon {
   display: flex;

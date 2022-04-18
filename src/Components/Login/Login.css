@@ -25,13 +25,15 @@
   padding: 0 10px 10px 10px;
   border: 1px solid #fed134;
   background-color: rgba(255, 255, 255, 0.103);
-  position: absolute;
+  /* position: absolute;
   top: 30%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%); */
 }
 .form-padding {
-  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 100px;
 }
 .text-start {
   position: static;
@@ -50,7 +52,7 @@
 }
 
 .account {
-  color: white;
+  color: black;
 }
 .account:hover {
   color: #fed134;

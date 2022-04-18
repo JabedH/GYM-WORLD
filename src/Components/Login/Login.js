@@ -59,9 +59,10 @@ const Login = () => {
   };
   return (
     <div className="login-bg">
-      <img src={bg} alt="" />
+      {/* <img src={bg} alt="" /> */}
       <div className="form-padding ">
         <div className="full-form">
+          <h3>Login</h3>
           <Form onSubmit={handleSubmit} className=" text-start">
             <input
               ref={emailRef}

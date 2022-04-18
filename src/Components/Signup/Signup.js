@@ -46,9 +46,10 @@ const Signup = () => {
   }
   return (
     <div className="login-bg">
-      <img src={bg} alt="" />
+      {/* <img src={bg} alt="" /> */}
       <div className="form-padding container">
         <div className="full-form">
+          <h3>Sign Up</h3>
           <Form onSubmit={handleSubmit} className=" text-start signup-form">
             <input
               className="w-100 mt-3"
