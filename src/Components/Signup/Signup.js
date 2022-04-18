@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Form } from "react-bootstrap";
 import {
   useCreateUserWithEmailAndPassword,
@@ -16,6 +16,8 @@ const Signup = () => {
     useCreateUserWithEmailAndPassword(auth, { sendEmailVerification: true });
   const [sendEmailVerification, sending, error1] =
     useSendEmailVerification(auth);
+
+  const [newError, setNewError] = useState("");
   const location = useLocation();
 
   const handleSubmit = async (event) => {
@@ -23,9 +25,20 @@ const Signup = () => {
     const displayName = event.target.name.value;
     const email = event.target.email.value;
     const password = event.target.password.value;
+    const ConfirmPass = event.target.confirmPass.value;
     createUserWithEmailAndPassword(email, password);
     await sendEmailVerification(email);
-    toast("Sent verification email");
+
+    if (password !== ConfirmPass) {
+      setNewError("password did not match");
+      return;
+    }
+    if (password.length < 6) {
+      setNewError("password must be 6 characters or longer");
+      return;
+    } else {
+      toast("Sent verification email");
+    }
   };
 
   let from = location.state?.from?.pathname || "/";
@@ -34,7 +47,6 @@ const Signup = () => {
   }
   return (
     <div className="login-bg">
-      {/* <img src={bg} alt="" /> */}
       <div className="form-padding container">
         <div className="full-form">
           <h3 className="text-center mt-2">Sign Up</h3>
@@ -61,7 +73,14 @@ const Signup = () => {
               placeholder="Password"
               required
             />
-
+            <input
+              className="w-100 mt-3 pl-2"
+              type="password"
+              name="confirmPass"
+              placeholder="confirm Password"
+              required
+            />
+            {newError}
             <button className="w-100 btn-color mt-3" type="submit">
               Sign Up
             </button>
