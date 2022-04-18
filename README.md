@@ -1,6 +1,7 @@
 # WELCOME TO GYM WORLD
 
-# GYM WORLD -(https://world-gym-bb4c8.web.app/).
+# GYM WORLD -(https://world-gym-bb4c8.web.app/). 
+or https://world-gym-bb4c8.firebaseapp.com/
 
 ### About this siite.
 
