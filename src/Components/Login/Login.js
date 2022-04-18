@@ -29,6 +29,7 @@ const Login = () => {
     navigate(from, { replace: true });
   }
   let ErrorElement;
+
   if (error) {
     ErrorElement = (
       <div>
@@ -47,7 +48,6 @@ const Login = () => {
   };
   const resetPassword = async () => {
     const email = emailRef.current.value;
-
     await sendPasswordResetEmail(email);
     alert("sent reset email");
   };
@@ -73,12 +73,7 @@ const Login = () => {
               placeholder="Password"
               required
             />
-            {/* <input
-          className="w-100 mt-3"
-          type="password"
-          name="ConfirmPassword"
-          placeholder="ConfirmPassword"
-        /> */}
+
             <div className="text-center mt-2" style={{ color: "red" }}>
               {ErrorElement}
             </div>

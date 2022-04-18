@@ -1,0 +1,34 @@
+.footer-bg {
+  background-color: #1a1a1a;
+  color: white;
+  margin-top: 50px;
+}
+.footer {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  justify-items: center;
+  padding: 20px 0;
+}
+.social-icon img {
+  width: 40px;
+  background-color: transparent;
+  margin-right: 10px;
+}
+.social-icon {
+  display: flex;
+  justify-content: start;
+}
+.footer-1st {
+  color: white;
+  display: flex;
+  justify-content: center;
+}
+/* ---- */
+.footer-bottom {
+  background-color: #000000;
+  color: white;
+  text-align: center;
+}
+.footer-bottom p {
+  padding: 20px 0;
+}

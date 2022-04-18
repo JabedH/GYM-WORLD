@@ -23,10 +23,22 @@ const Signup = () => {
     const displayName = event.target.name.value;
     const email = event.target.email.value;
     const password = event.target.password.value;
+    const ConfirmPassword = event.target.ConfirmPassword.value;
     await createUserWithEmailAndPassword(email, password);
     await sendEmailVerification(email);
     alert("Sent email");
+    // if (password !== ConfirmPassword) {
+    //   error("ak nai");
+    //   return;
+    // }
   };
+  // if (error) {
+  //   ErrorElement = (
+  //     <div>
+  //       <p>password didn't match {error} </p>
+  //     </div>
+  //   );
+  // }
   let from = location.state?.from?.pathname || "/";
 
   if (user) {
@@ -60,12 +72,13 @@ const Signup = () => {
               placeholder="Password"
               required
             />
-            {/* <input
-          className="w-100 mt-3"
-          type="password"
-          name="ConfirmPassword"
-          placeholder="ConfirmPassword"
-        /> */}
+            <input
+              className="w-100 mt-3"
+              type="password"
+              name="ConfirmPassword"
+              placeholder="ConfirmPassword"
+            />
+
             <button className="w-100 btn-color mt-3" type="submit">
               Sign Up
             </button>
